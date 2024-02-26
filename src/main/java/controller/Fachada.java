@@ -15,12 +15,15 @@ public class Fachada implements ActionListener{
 
     public Fachada(){
         this.vista = new Ventana();
-//prueba otra
+        
         this.vista.jrAplazado.addActionListener(this);
         this.vista.jrMenorEdad.addActionListener(this);
         this.vista.jrRecluta.addActionListener(this);
         this.vista.jrReservista.addActionListener(this);
         this.vista.jrRemiso.addActionListener(this);
+        this.vista.BntInsertar.addActionListener(this);
+        this.vista.btnBuscar.addActionListener(this);
+        this.vista.btnSalir.addActionListener(this);
         this.vista.BntInsertar.addActionListener(this);
         this.cAplazado = new ControlAplazado();
         this.cMenorEdad = new ControlMenorEdad();
