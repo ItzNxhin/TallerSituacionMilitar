@@ -5,7 +5,11 @@ import java.awt.event.ActionListener;
 
 import view.Ventana;
 
+/**
+ * Controlador principal
+ */
 public class Fachada implements ActionListener{
+    //Atributos necesarios
     private Ventana vista;
     private ControlAplazado cAplazado;
     private ControlMenorEdad cMenorEdad;
@@ -13,9 +17,17 @@ public class Fachada implements ActionListener{
     private ControlReservista cReservista;
     private ControlRemiso cRemiso;
 
+    //Constructor
     public Fachada(){
+        //Instanciacion de la vista
         this.vista = new Ventana();
-        
+        //Instanciacion de los controles
+        this.cAplazado = new ControlAplazado();
+        this.cMenorEdad = new ControlMenorEdad();
+        this.cReclutamiento = new ControlReclutamiento();
+        this.cReservista = new ControlReservista();
+        this.cRemiso = new ControlRemiso();
+        //Escucha a los botones y radioButtons
         this.vista.jrAplazado.addActionListener(this);
         this.vista.jrMenorEdad.addActionListener(this);
         this.vista.jrRecluta.addActionListener(this);
@@ -25,11 +37,7 @@ public class Fachada implements ActionListener{
         this.vista.btnBuscar.addActionListener(this);
         this.vista.btnSalir.addActionListener(this);
         this.vista.BntInsertar.addActionListener(this);
-        this.cAplazado = new ControlAplazado();
-        this.cMenorEdad = new ControlMenorEdad();
-        this.cReclutamiento = new ControlReclutamiento();
-        this.cReservista = new ControlReservista();
-        this.cRemiso = new ControlRemiso();
+        
         iniciar();
     
 
@@ -40,6 +48,7 @@ public class Fachada implements ActionListener{
     }
 
     public void actionPerformed(ActionEvent e){
+        //Metodos para desabilitar o habilitar los inputs requeridos
         if(e.getSource() == this.vista.jrAplazado){
             
         }
@@ -55,6 +64,7 @@ public class Fachada implements ActionListener{
         else if(e.getSource() == this.vista.jrMenorEdad){
 
         }
+        //Boton guardar
         else if(e.getSource() == this.vista.BntInsertar){
             
             if(this.vista.jrRemiso.isSelected()){
