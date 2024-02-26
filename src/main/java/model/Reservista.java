@@ -3,7 +3,7 @@ package model;
 public class Reservista extends Persona{
     private String libreta;
 
-    private Reservista(String cedula, String nombre, String apellido, int edad, String libreta){
+    public Reservista(String cedula, String nombre, String apellido, int edad, String libreta){
 		this.cedula = cedula;
         this.nombre = nombre;
 		this.apellido = apellido;

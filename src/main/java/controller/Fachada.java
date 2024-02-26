@@ -56,23 +56,57 @@ public class Fachada implements ActionListener{
 
         }
         else if(e.getSource() == this.vista.BntInsertar){
+            
             if(this.vista.jrRemiso.isSelected()){
-
+                try {
+                    cRemiso.agregar(this.vista.jtCedula.getText(), this.vista.jtNombre.getText(),this.vista.jtApellido.getText(),Integer.parseInt(this.vista.jtEdad.getText()));
+                } catch (NullPointerException e2 ) {
+                    this.vista.campoVacio();
+                } catch (NumberFormatException e3) {
+                    this.vista.campoInvalido();
+                }
+    
             }
             else if(this.vista.jrRecluta.isSelected()){
-
+                try {
+                    cReclutamiento.agregar(this.vista.jtCedula.getText(), this.vista.jtNombre.getText(),this.vista.jtApellido.getText(),Integer.parseInt(this.vista.jtEdad.getText()), this.vista.jtLibretaCR.getText());
+                } catch (NullPointerException e2 ) {
+                    this.vista.campoVacio();
+                } catch (NumberFormatException e3) {
+                    this.vista.campoInvalido();
+                }
             }
             else if(this.vista.jrReservista.isSelected()){
+                try {
+                    cReservista.agregar(this.vista.jtCedula.getText(), this.vista.jtNombre.getText(),this.vista.jtApellido.getText(),Integer.parseInt(this.vista.jtEdad.getText()), this.vista.jtLibretaCR.getText());
+                } catch (NullPointerException e2 ) {
+                    this.vista.campoVacio();
+                } catch (NumberFormatException e3) {
+                    this.vista.campoInvalido();
+                }
 
             }
             else if(this.vista.jrAplazado.isSelected()){
-
+                try {
+                    cAplazado.agregar(this.vista.jtCedula.getText(), this.vista.jtNombre.getText(),this.vista.jtApellido.getText(),Integer.parseInt(this.vista.jtEdad.getText()), this.vista.jtAplazamiento.getText());
+                } catch (NullPointerException e2 ) {
+                    this.vista.campoVacio();
+                } catch (NumberFormatException e3) {
+                    this.vista.campoInvalido();
+                }
             }
             else if(this.vista.jrMenorEdad.isSelected()){
+                try {
+                    cMenorEdad.agregar(this.vista.jtCedula.getText(), this.vista.jtNombre.getText(),this.vista.jtApellido.getText(),Integer.parseInt(this.vista.jtEdad.getText()));
+                } catch (NullPointerException e2 ) {
+                    this.vista.campoVacio();
+                } catch (NumberFormatException e3) {
+                    this.vista.campoInvalido();
+                }
 
             }
             else{
-                
+                this.vista.estadoVacio();
             }
         }
 

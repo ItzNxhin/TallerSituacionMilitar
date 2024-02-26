@@ -11,7 +11,7 @@ public class Reclutamiento extends Persona{
         this.codReclutamiento = codReclutamiento;
     }
 
-    private Reclutamiento(String cedula, String nombre, String apellido, int edad, String codReclutamiento){
+    public Reclutamiento(String cedula, String nombre, String apellido, int edad, String codReclutamiento){
 		this.cedula = cedula;
         this.nombre = nombre;
 		this.apellido = apellido;

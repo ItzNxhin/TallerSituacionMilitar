@@ -11,7 +11,7 @@ public class Aplazado extends Persona{
         this.fechaAplazado = fechaAplazado;
     }
 
-    private Aplazado(String cedula, String nombre, String apellido, int edad, String fechaAplazado){
+    public Aplazado(String cedula, String nombre, String apellido, int edad, String fechaAplazado){
 		this.cedula = cedula;
         this.nombre = nombre;
 		this.apellido = apellido;
