@@ -73,6 +73,10 @@ public class Fachada implements ActionListener{
             }
         }
 
+        else if (e.getSource() == this.vista.btnSalir){
+            this.vista.dispose();
+        }
+
         
     }
 }
