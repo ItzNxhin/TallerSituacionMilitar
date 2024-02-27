@@ -53,6 +53,7 @@ public class Fachada implements ActionListener{
             
         }
         else if(e.getSource() == this.vista.jrRemiso){
+            this.vista.jtLibretaCR.setVisible(false);;
 
         }
         else if(e.getSource() == this.vista.jrRecluta){
@@ -118,6 +119,14 @@ public class Fachada implements ActionListener{
             else{
                 this.vista.estadoVacio();
             }
+        }
+
+        else if(e.getSource() == this.vista.btnBuscar){
+
+        }
+
+        else if(e.getSource() == this.vista.btnLimpiar){
+            this.vista.limpiarCampos();
         }
 
         else if (e.getSource() == this.vista.btnSalir){

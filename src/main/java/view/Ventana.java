@@ -291,4 +291,13 @@ public class Ventana extends javax.swing.JFrame {
     public void estadoVacio(){
         JOptionPane.showMessageDialog(null, "No hay estado militar seleccionado, elija el estado", "ESTADO SIN SLECCIONAR", JOptionPane.ERROR_MESSAGE);
     }
+
+    public void limpiarCampos() {
+        jtCedula.setText("");
+        jtNombre.setText("");
+        jtApellido.setText("");
+        jtLibretaCR.setText("");
+        jtAplazamiento.setText("");
+
+    }
 }
