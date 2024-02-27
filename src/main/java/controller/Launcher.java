@@ -9,9 +9,6 @@ package controller;
  *
  * @author nahin
  */
-//hola mundo
-//hola
-//Otro comentario
 public class Launcher {
     public static void main(String args[]){
         new Fachada();
