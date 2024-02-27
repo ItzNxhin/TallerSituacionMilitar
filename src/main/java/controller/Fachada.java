@@ -53,7 +53,8 @@ public class Fachada implements ActionListener{
             
         }
         else if(e.getSource() == this.vista.jrRemiso){
-            this.vista.jtLibretaCR.setVisible(false);;
+            this.vista.jtAplazamiento.setVisible(false);
+            this.vista.jtLibretaCR.setVisible(false);
 
         }
         else if(e.getSource() == this.vista.jrRecluta){
