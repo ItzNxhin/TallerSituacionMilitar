@@ -59,7 +59,7 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         jLabel1.setText("MILITAR COLOMBIANO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("src/view/Imagen1.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("java/view/Imagen1.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 410));
 
         pack();
