@@ -32,23 +32,23 @@ public class Ventana extends javax.swing.JFrame {
         tipoPersona = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         BntInsertar = new javax.swing.JButton();
-        jrReservista = new javax.swing.JRadioButton();
-        jrRemiso = new javax.swing.JRadioButton();
-        jrMenorEdad = new javax.swing.JRadioButton();
-        jrRecluta = new javax.swing.JRadioButton();
-        jrAplazado = new javax.swing.JRadioButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jtCedula = new javax.swing.JTextField();
-        jtNombre = new javax.swing.JTextField();
-        jtApellido = new javax.swing.JTextField();
-        jtEdad = new javax.swing.JTextField();
-        jtLibretaCR = new javax.swing.JTextField();
-        jtAplazamiento = new javax.swing.JTextField();
+        bReservista = new javax.swing.JRadioButton();
+        bRemiso = new javax.swing.JRadioButton();
+        bMenorEdad = new javax.swing.JRadioButton();
+        bRecluta = new javax.swing.JRadioButton();
+        bAplazado = new javax.swing.JRadioButton();
+        textoCedula = new javax.swing.JLabel();
+        textoNombre = new javax.swing.JLabel();
+        textoApellido = new javax.swing.JLabel();
+        textoEdad = new javax.swing.JLabel();
+        textoLibreta = new javax.swing.JLabel();
+        textoFecha = new javax.swing.JLabel();
+        cajaCedula = new javax.swing.JTextField();
+        cajaNombre = new javax.swing.JTextField();
+        cajaApellido = new javax.swing.JTextField();
+        cajaEdad = new javax.swing.JTextField();
+        cajaLibreta = new javax.swing.JTextField();
+        cajaFecha = new javax.swing.JTextField();
         btnLimpiar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
 
@@ -59,32 +59,32 @@ public class Ventana extends javax.swing.JFrame {
 
         BntInsertar.setText("Insertar");
 
-        tipoPersona.add(jrReservista);
-        jrReservista.setText("Reservista");
+        tipoPersona.add(bReservista);
+        bReservista.setText("Reservista");
 
-        tipoPersona.add(jrRemiso);
-        jrRemiso.setText("Remiso");
+        tipoPersona.add(bRemiso);
+        bRemiso.setText("Remiso");
 
-        tipoPersona.add(jrMenorEdad);
-        jrMenorEdad.setText("Menor de edad");
+        tipoPersona.add(bMenorEdad);
+        bMenorEdad.setText("Menor de edad");
 
-        tipoPersona.add(jrRecluta);
-        jrRecluta.setText("Recluta");
+        tipoPersona.add(bRecluta);
+        bRecluta.setText("Recluta");
 
-        tipoPersona.add(jrAplazado);
-        jrAplazado.setText("Aplazado");
+        tipoPersona.add(bAplazado);
+        bAplazado.setText("Aplazado");
 
-        jLabel1.setText("Cédula");
+        textoCedula.setText("Cédula");
 
-        jLabel2.setText("Nombre");
+        textoNombre.setText("Nombre");
 
-        jLabel3.setText("Apellido");
+        textoApellido.setText("Apellido");
 
-        jLabel4.setText("Edad");
+        textoEdad.setText("Edad");
 
-        jLabel5.setText("Libreta Militar o Código de Reclutamiento");
+        textoLibreta.setText("Libreta Militar o Código de Reclutamiento");
 
-        jLabel6.setText("Fecha de Aplazamiento");
+        textoFecha.setText("Fecha de Aplazamiento");
 
         btnLimpiar.setText("Limpiar");
 
@@ -98,36 +98,36 @@ public class Ventana extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
+                        .addComponent(textoFecha)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jtAplazamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cajaFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addComponent(textoEdad)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cajaEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addComponent(textoApellido)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cajaApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                        .addComponent(textoNombre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cajaNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(textoCedula)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cajaCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jrReservista)
+                                .addComponent(bReservista)
                                 .addGap(84, 84, 84)
-                                .addComponent(jrRemiso))
+                                .addComponent(bRemiso))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnLimpiar)
                                 .addGap(43, 43, 43)
                                 .addComponent(BntInsertar))
-                            .addComponent(jLabel5))
+                            .addComponent(textoLibreta))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(58, 58, 58)
@@ -136,14 +136,14 @@ public class Ventana extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jtLibretaCR, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jrMenorEdad, javax.swing.GroupLayout.Alignment.TRAILING))))))
+                                    .addComponent(cajaLibreta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(bMenorEdad, javax.swing.GroupLayout.Alignment.TRAILING))))))
                 .addGap(37, 37, 37))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(108, 108, 108)
-                .addComponent(jrRecluta)
+                .addComponent(bRecluta)
                 .addGap(92, 92, 92)
-                .addComponent(jrAplazado)
+                .addComponent(bAplazado)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -151,29 +151,29 @@ public class Ventana extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jrReservista)
-                    .addComponent(jrRemiso)
-                    .addComponent(jrMenorEdad))
+                    .addComponent(bReservista)
+                    .addComponent(bRemiso)
+                    .addComponent(bMenorEdad))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jrRecluta)
-                    .addComponent(jrAplazado))
+                    .addComponent(bRecluta)
+                    .addComponent(bAplazado))
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoCedula)
+                    .addComponent(cajaCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoNombre)
+                    .addComponent(cajaNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoApellido)
+                    .addComponent(cajaApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoEdad)
+                    .addComponent(cajaEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -184,12 +184,12 @@ public class Ventana extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jtLibretaCR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textoLibreta)
+                            .addComponent(cajaLibreta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jtAplazamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textoFecha)
+                            .addComponent(cajaFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addComponent(BntInsertar)
                         .addGap(53, 53, 53))))
@@ -216,26 +216,26 @@ public class Ventana extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BntInsertar;
+    public javax.swing.JRadioButton bAplazado;
+    public javax.swing.JRadioButton bMenorEdad;
+    public javax.swing.JRadioButton bRecluta;
+    public javax.swing.JRadioButton bRemiso;
+    public javax.swing.JRadioButton bReservista;
     public javax.swing.JButton btnLimpiar;
     public javax.swing.JButton btnSalir;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    public javax.swing.JTextField cajaApellido;
+    public javax.swing.JTextField cajaCedula;
+    public javax.swing.JTextField cajaEdad;
+    public javax.swing.JTextField cajaFecha;
+    public javax.swing.JTextField cajaLibreta;
+    public javax.swing.JTextField cajaNombre;
     private javax.swing.JPanel jPanel1;
-    public javax.swing.JRadioButton jrAplazado;
-    public javax.swing.JRadioButton jrMenorEdad;
-    public javax.swing.JRadioButton jrRecluta;
-    public javax.swing.JRadioButton jrRemiso;
-    public javax.swing.JRadioButton jrReservista;
-    public javax.swing.JTextField jtApellido;
-    public javax.swing.JTextField jtAplazamiento;
-    public javax.swing.JTextField jtCedula;
-    public javax.swing.JTextField jtEdad;
-    public javax.swing.JTextField jtLibretaCR;
-    public javax.swing.JTextField jtNombre;
+    private javax.swing.JLabel textoApellido;
+    private javax.swing.JLabel textoCedula;
+    private javax.swing.JLabel textoEdad;
+    private javax.swing.JLabel textoFecha;
+    private javax.swing.JLabel textoLibreta;
+    private javax.swing.JLabel textoNombre;
     private javax.swing.ButtonGroup tipoPersona;
     // End of variables declaration//GEN-END:variables
 
@@ -253,11 +253,11 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     public void limpiarCampos() {
-        jtCedula.setText("");
-        jtNombre.setText("");
-        jtApellido.setText("");
-        jtLibretaCR.setText("");
-        jtAplazamiento.setText("");
+        cajaCedula.setText("");
+        cajaNombre.setText("");
+        cajaApellido.setText("");
+        cajaLibreta.setText("");
+        cajaFecha.setText("");
 
     }
 }

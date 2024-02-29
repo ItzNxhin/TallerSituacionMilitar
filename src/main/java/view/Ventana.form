@@ -52,43 +52,43 @@
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="textoFecha" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jtAplazamiento" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="cajaFecha" min="-2" pref="120" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="textoEdad" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jtEdad" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="cajaEdad" min="-2" pref="120" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textoApellido" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jtApellido" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="cajaApellido" min="-2" pref="120" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="textoNombre" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jtNombre" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="cajaNombre" min="-2" pref="120" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="textoCedula" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jtCedula" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="cajaCedula" min="-2" pref="120" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jrReservista" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bReservista" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                                  <Component id="jrRemiso" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bRemiso" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="btnLimpiar" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                                   <Component id="BntInsertar" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoLibreta" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -99,8 +99,8 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jtLibretaCR" alignment="1" min="-2" pref="120" max="-2" attributes="0"/>
-                                      <Component id="jrMenorEdad" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cajaLibreta" alignment="1" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="bMenorEdad" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -110,9 +110,9 @@
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
-                  <Component id="jrRecluta" min="-2" max="-2" attributes="0"/>
+                  <Component id="bRecluta" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                  <Component id="jrAplazado" min="-2" max="-2" attributes="0"/>
+                  <Component id="bAplazado" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -122,34 +122,34 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jrReservista" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jrRemiso" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jrMenorEdad" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bReservista" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bRemiso" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bMenorEdad" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jrRecluta" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jrAplazado" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bRecluta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bAplazado" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtCedula" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoCedula" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cajaCedula" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cajaNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtApellido" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoApellido" min="-2" max="-2" attributes="0"/>
+                      <Component id="cajaApellido" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtEdad" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoEdad" min="-2" max="-2" attributes="0"/>
+                      <Component id="cajaEdad" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
@@ -163,13 +163,13 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtLibretaCR" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoLibreta" min="-2" max="-2" attributes="0"/>
+                              <Component id="cajaLibreta" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtAplazamiento" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoFecha" min="-2" max="-2" attributes="0"/>
+                              <Component id="cajaFecha" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="20" max="32767" attributes="0"/>
                           <Component id="BntInsertar" min="-2" max="-2" attributes="0"/>
@@ -189,7 +189,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jrReservista">
+        <Component class="javax.swing.JRadioButton" name="bReservista">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tipoPersona"/>
@@ -200,7 +200,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jrRemiso">
+        <Component class="javax.swing.JRadioButton" name="bRemiso">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tipoPersona"/>
@@ -211,7 +211,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jrMenorEdad">
+        <Component class="javax.swing.JRadioButton" name="bMenorEdad">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tipoPersona"/>
@@ -222,7 +222,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jrRecluta">
+        <Component class="javax.swing.JRadioButton" name="bRecluta">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tipoPersona"/>
@@ -233,7 +233,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jrAplazado">
+        <Component class="javax.swing.JRadioButton" name="bAplazado">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tipoPersona"/>
@@ -244,62 +244,62 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="textoCedula">
           <Properties>
             <Property name="text" type="java.lang.String" value="C&#xe9;dula"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="textoNombre">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="textoApellido">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellido"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="textoEdad">
           <Properties>
             <Property name="text" type="java.lang.String" value="Edad"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="textoLibreta">
           <Properties>
             <Property name="text" type="java.lang.String" value="Libreta Militar o C&#xf3;digo de Reclutamiento"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="textoFecha">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fecha de Aplazamiento"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtCedula">
+        <Component class="javax.swing.JTextField" name="cajaCedula">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtNombre">
+        <Component class="javax.swing.JTextField" name="cajaNombre">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtApellido">
+        <Component class="javax.swing.JTextField" name="cajaApellido">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtEdad">
+        <Component class="javax.swing.JTextField" name="cajaEdad">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtLibretaCR">
+        <Component class="javax.swing.JTextField" name="cajaLibreta">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtAplazamiento">
+        <Component class="javax.swing.JTextField" name="cajaFecha">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
