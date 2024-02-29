@@ -50,21 +50,24 @@ public class Fachada implements ActionListener{
     public void actionPerformed(ActionEvent e){
         //Metodos para desabilitar o habilitar los inputs requeridos
         if(e.getSource() == this.vista.jrAplazado){
-            
+            this.vista.jtAplazamiento.setVisible(true);
+            this.vista.jtLibretaCR.setVisible(true);
         }
         else if(e.getSource() == this.vista.jrRemiso){
             this.vista.jtAplazamiento.setVisible(false);
             this.vista.jtLibretaCR.setVisible(false);
-
         }
         else if(e.getSource() == this.vista.jrRecluta){
-
+            this.vista.jtAplazamiento.setVisible(false);
+            this.vista.jtLibretaCR.setVisible(true);
         }
         else if(e.getSource() == this.vista.jrReservista){
-
+            this.vista.jtAplazamiento.setVisible(false);
+            this.vista.jtLibretaCR.setVisible(true);
         }
         else if(e.getSource() == this.vista.jrMenorEdad){
-
+            this.vista.jtAplazamiento.setVisible(false);
+            this.vista.jtLibretaCR.setVisible(false);
         }
         //Boton guardar
         else if(e.getSource() == this.vista.BntInsertar){
