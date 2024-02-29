@@ -149,6 +149,5 @@ public class Fachada implements ActionListener{
             this.vista.dispose();
         }
 
-       //Prueba pc sara
     }
 }
