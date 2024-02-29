@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import view.Ventana;
+import view.VentanaBienvenida;
 
 /**
  * Controlador principal
@@ -11,6 +12,7 @@ import view.Ventana;
 public class Fachada implements ActionListener{
     //Atributos necesarios
     private Ventana vista;
+    private VentanaBienvenida vb;
     private ControlAplazado cAplazado;
     private ControlMenorEdad cMenorEdad;
     private ControlReclutamiento cReclutamiento;
@@ -21,6 +23,7 @@ public class Fachada implements ActionListener{
     public Fachada(){
         //Instanciacion de la vista
         this.vista = new Ventana();
+        this.vb = new VentanaBienvenida();
         //Instanciacion de los controles
         this.cAplazado = new ControlAplazado();
         this.cMenorEdad = new ControlMenorEdad();
@@ -37,6 +40,8 @@ public class Fachada implements ActionListener{
         this.vista.btnBuscar.addActionListener(this);
         this.vista.btnSalir.addActionListener(this);
         this.vista.BntInsertar.addActionListener(this);
+        this.vb.btnInsertar1.addActionListener(this);
+        this.vb.btnConsultar1.addActionListener(this);
         
         iniciar();
     
@@ -44,7 +49,8 @@ public class Fachada implements ActionListener{
     }
 
     private void iniciar() {
-        vista.setVisible(true);  //Se hace visible la ventana principal de la aplicación
+        vb.setVisible(true);
+        vista.setVisible(false);  //Se hace visible la ventana principal de la aplicación
     }
 
     public void actionPerformed(ActionEvent e){
@@ -68,6 +74,12 @@ public class Fachada implements ActionListener{
         else if(e.getSource() == this.vista.jrMenorEdad){
             this.vista.jtAplazamiento.setVisible(false);
             this.vista.jtLibretaCR.setVisible(false);
+        }
+        else if (e.getSource() == this.vb.btnInsertar1){
+            vista.setVisible(true);
+        }
+        else if (e.getSource()== this.vb.btnConsultar1){
+            //hkdwjhd
         }
         //Boton guardar
         else if(e.getSource() == this.vista.BntInsertar){
