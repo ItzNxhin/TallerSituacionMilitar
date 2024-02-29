@@ -137,9 +137,9 @@ public class Fachada implements ActionListener{
             }
         }
 
-        else if(e.getSource() == this.vista.btnBuscar){
+        //else if(e.getSource() == this.vista.btnBuscar){}
 
-        }
+        
 
         else if(e.getSource() == this.vista.btnLimpiar){
             this.vista.limpiarCampos();
