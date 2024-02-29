@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import view.Ventana;
 import view.VentanaBienvenida;
+import view.VentanaBuscar;
 
 /**
  * Controlador principal
@@ -13,6 +14,7 @@ public class Fachada implements ActionListener{
     //Atributos necesarios
     private Ventana vista;
     private VentanaBienvenida vb;
+    private VentanaBuscar vBuscar;
     private ControlAplazado cAplazado;
     private ControlMenorEdad cMenorEdad;
     private ControlReclutamiento cReclutamiento;
@@ -24,6 +26,8 @@ public class Fachada implements ActionListener{
         //Instanciacion de la vista
         this.vista = new Ventana();
         this.vb = new VentanaBienvenida();
+        this.vBuscar = new VentanaBuscar();
+        
         //Instanciacion de los controles
         this.cAplazado = new ControlAplazado();
         this.cMenorEdad = new ControlMenorEdad();
@@ -31,17 +35,22 @@ public class Fachada implements ActionListener{
         this.cReservista = new ControlReservista();
         this.cRemiso = new ControlRemiso();
         //Escucha a los botones y radioButtons
-        this.vista.jrAplazado.addActionListener(this);
-        this.vista.jrMenorEdad.addActionListener(this);
-        this.vista.jrRecluta.addActionListener(this);
-        this.vista.jrReservista.addActionListener(this);
-        this.vista.jrRemiso.addActionListener(this);
+        this.vista.bAplazado.addActionListener(this);
+        this.vista.bMenorEdad.addActionListener(this);
+        this.vista.bRecluta.addActionListener(this);
+        this.vista.bReservista.addActionListener(this);
+        this.vista.bRemiso.addActionListener(this);
         this.vista.BntInsertar.addActionListener(this);
         //this.vista.btnBuscar.addActionListener(this);
         this.vista.btnSalir.addActionListener(this);
         this.vista.BntInsertar.addActionListener(this);
+        //Escucha los botones de la ventana de bienvenida
         this.vb.btnInsertar1.addActionListener(this);
         this.vb.btnConsultar1.addActionListener(this);
+        //Escucha los botones de la ventana de consulta
+        this.vBuscar.btnConsultar2.addActionListener(this);
+        this.vBuscar.btnLimpiar1.addActionListener(this);
+        this.vBuscar.btnSalir1.addActionListener(this);
         
         iniciar();
     
@@ -55,38 +64,40 @@ public class Fachada implements ActionListener{
 
     public void actionPerformed(ActionEvent e){
         //Metodos para desabilitar o habilitar los inputs requeridos
-        if(e.getSource() == this.vista.jrAplazado){
-            this.vista.jtAplazamiento.setVisible(true);
-            this.vista.jtLibretaCR.setVisible(true);
+        if(e.getSource() == this.vista.bAplazado){
+            this.vista.cajaFecha.setVisible(true);
+            this.vista.cajaLibreta.setVisible(true);
         }
-        else if(e.getSource() == this.vista.jrRemiso){
-            this.vista.jtAplazamiento.setVisible(false);
-            this.vista.jtLibretaCR.setVisible(false);
+        else if(e.getSource() == this.vista.bRemiso){
+            this.vista.cajaFecha.setVisible(false);
+            this.vista.cajaLibreta.setVisible(false);
         }
-        else if(e.getSource() == this.vista.jrRecluta){
-            this.vista.jtAplazamiento.setVisible(false);
-            this.vista.jtLibretaCR.setVisible(true);
+        else if(e.getSource() == this.vista.bRecluta){
+            this.vista.cajaFecha.setVisible(false);
+            this.vista.cajaLibreta.setVisible(true);
         }
-        else if(e.getSource() == this.vista.jrReservista){
-            this.vista.jtAplazamiento.setVisible(false);
-            this.vista.jtLibretaCR.setVisible(true);
+        else if(e.getSource() == this.vista.bReservista){
+            this.vista.cajaFecha.setVisible(false);
+            this.vista.cajaLibreta.setVisible(true);
         }
-        else if(e.getSource() == this.vista.jrMenorEdad){
-            this.vista.jtAplazamiento.setVisible(false);
-            this.vista.jtLibretaCR.setVisible(false);
+        else if(e.getSource() == this.vista.bMenorEdad){
+            this.vista.cajaFecha.setVisible(false);
+            this.vista.cajaLibreta.setVisible(false);
         }
+        //Se hace visible la ventana de insertar una persona
         else if (e.getSource() == this.vb.btnInsertar1){
             vista.setVisible(true);
         }
+        //Se hace visible la ventana de consultar una persona
         else if (e.getSource()== this.vb.btnConsultar1){
-            //hkdwjhd
+            vBuscar.setVisible(true);
         }
         //Boton guardar
         else if(e.getSource() == this.vista.BntInsertar){
             
-            if(this.vista.jrRemiso.isSelected()){
+            if(this.vista.bRemiso.isSelected()){
                 try {
-                    cRemiso.agregar(this.vista.jtCedula.getText(), this.vista.jtNombre.getText(),this.vista.jtApellido.getText(),Integer.parseInt(this.vista.jtEdad.getText()));
+                    cRemiso.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()));
                 } catch (NullPointerException e2 ) {
                     this.vista.campoVacio();
                 } catch (NumberFormatException e3) {
@@ -94,18 +105,18 @@ public class Fachada implements ActionListener{
                 }
     
             }
-            else if(this.vista.jrRecluta.isSelected()){
+            else if(this.vista.bRecluta.isSelected()){
                 try {
-                    cReclutamiento.agregar(this.vista.jtCedula.getText(), this.vista.jtNombre.getText(),this.vista.jtApellido.getText(),Integer.parseInt(this.vista.jtEdad.getText()), this.vista.jtLibretaCR.getText());
+                    cReclutamiento.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaLibreta.getText());
                 } catch (NullPointerException e2 ) {
                     this.vista.campoVacio();
                 } catch (NumberFormatException e3) {
                     this.vista.campoInvalido();
                 }
             }
-            else if(this.vista.jrReservista.isSelected()){
+            else if(this.vista.bReservista.isSelected()){
                 try {
-                    cReservista.agregar(this.vista.jtCedula.getText(), this.vista.jtNombre.getText(),this.vista.jtApellido.getText(),Integer.parseInt(this.vista.jtEdad.getText()), this.vista.jtLibretaCR.getText());
+                    cReservista.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaLibreta.getText());
                 } catch (NullPointerException e2 ) {
                     this.vista.campoVacio();
                 } catch (NumberFormatException e3) {
@@ -113,18 +124,18 @@ public class Fachada implements ActionListener{
                 }
 
             }
-            else if(this.vista.jrAplazado.isSelected()){
+            else if(this.vista.bAplazado.isSelected()){
                 try {
-                    cAplazado.agregar(this.vista.jtCedula.getText(), this.vista.jtNombre.getText(),this.vista.jtApellido.getText(),Integer.parseInt(this.vista.jtEdad.getText()), this.vista.jtAplazamiento.getText());
+                    cAplazado.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaFecha.getText());
                 } catch (NullPointerException e2 ) {
                     this.vista.campoVacio();
                 } catch (NumberFormatException e3) {
                     this.vista.campoInvalido();
                 }
             }
-            else if(this.vista.jrMenorEdad.isSelected()){
+            else if(this.vista.bMenorEdad.isSelected()){
                 try {
-                    cMenorEdad.agregar(this.vista.jtCedula.getText(), this.vista.jtNombre.getText(),this.vista.jtApellido.getText(),Integer.parseInt(this.vista.jtEdad.getText()));
+                    cMenorEdad.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()));
                 } catch (NullPointerException e2 ) {
                     this.vista.campoVacio();
                 } catch (NumberFormatException e3) {
@@ -136,18 +147,27 @@ public class Fachada implements ActionListener{
                 this.vista.estadoVacio();
             }
         }
-
-        //else if(e.getSource() == this.vista.btnBuscar){}
+        //Botón consultar 
+        else if(e.getSource() == this.vBuscar.btnConsultar2){
+        
+        }
 
         
-
+        //Permite limpiar los campos de la ventana de Insertar persona
         else if(e.getSource() == this.vista.btnLimpiar){
             this.vista.limpiarCampos();
         }
-
+        //Permite cerrar la ventana de insertar persona mediante el botón salir
         else if (e.getSource() == this.vista.btnSalir){
             this.vista.dispose();
         }
-
+        //Permite limpiar el campo de la ventana de Consultar
+        else if (e.getSource() == this.vBuscar.btnLimpiar1){
+            this.vBuscar.limpiarCampo();
+        }
+        //Permite salir de la ventana de Consultar
+        else if (e.getSource() == this.vBuscar.btnSalir1){
+            this.vBuscar.dispose();
+        }
     }
 }
