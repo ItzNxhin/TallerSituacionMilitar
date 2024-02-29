@@ -69,7 +69,6 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnInsertar1ActionPerformed
 
-//PRueba
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnConsultar1;
