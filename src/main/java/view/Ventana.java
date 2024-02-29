@@ -83,6 +83,7 @@ public class Ventana extends javax.swing.JFrame {
         textoEdad.setText("Edad");
 
         textoLibreta.setText("Libreta Militar o Código de Reclutamiento");
+        textoLibreta.setAlignmentY(0.0F);
 
         textoFecha.setText("Fecha de Aplazamiento");
 
@@ -127,7 +128,7 @@ public class Ventana extends javax.swing.JFrame {
                                 .addComponent(btnLimpiar)
                                 .addGap(43, 43, 43)
                                 .addComponent(BntInsertar))
-                            .addComponent(textoLibreta))
+                            .addComponent(textoLibreta, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(58, 58, 58)
@@ -183,9 +184,9 @@ public class Ventana extends javax.swing.JFrame {
                         .addGap(33, 33, 33))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textoLibreta)
-                            .addComponent(cajaLibreta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cajaLibreta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textoLibreta))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textoFecha)
@@ -233,8 +234,8 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel textoApellido;
     private javax.swing.JLabel textoCedula;
     private javax.swing.JLabel textoEdad;
-    private javax.swing.JLabel textoFecha;
-    private javax.swing.JLabel textoLibreta;
+    public javax.swing.JLabel textoFecha;
+    public javax.swing.JLabel textoLibreta;
     private javax.swing.JLabel textoNombre;
     private javax.swing.ButtonGroup tipoPersona;
     // End of variables declaration//GEN-END:variables

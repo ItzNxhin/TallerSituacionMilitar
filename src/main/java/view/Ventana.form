@@ -88,7 +88,7 @@
                                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                                   <Component id="BntInsertar" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="textoLibreta" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoLibreta" alignment="0" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -162,9 +162,9 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="textoLibreta" min="-2" max="-2" attributes="0"/>
-                              <Component id="cajaLibreta" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cajaLibreta" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoLibreta" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -267,12 +267,19 @@
         <Component class="javax.swing.JLabel" name="textoLibreta">
           <Properties>
             <Property name="text" type="java.lang.String" value="Libreta Militar o C&#xf3;digo de Reclutamiento"/>
+            <Property name="alignmentY" type="float" value="0.0"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="textoFecha">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fecha de Aplazamiento"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="cajaCedula">
           <AuxValues>
