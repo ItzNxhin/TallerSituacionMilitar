@@ -37,7 +37,7 @@ public class Fachada implements ActionListener{
         this.vista.jrReservista.addActionListener(this);
         this.vista.jrRemiso.addActionListener(this);
         this.vista.BntInsertar.addActionListener(this);
-        this.vista.btnBuscar.addActionListener(this);
+        //this.vista.btnBuscar.addActionListener(this);
         this.vista.btnSalir.addActionListener(this);
         this.vista.BntInsertar.addActionListener(this);
         this.vb.btnInsertar1.addActionListener(this);
