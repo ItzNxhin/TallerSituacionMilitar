@@ -67,22 +67,32 @@ public class Fachada implements ActionListener{
         if(e.getSource() == this.vista.bAplazado){
             this.vista.cajaFecha.setVisible(true);
             this.vista.cajaLibreta.setVisible(true);
+            this.vista.textoLibreta.setText("Libreta Militar o Código de Reclutamiento");
+            this.vista.textoFecha.setText("Fecha de aplazamiento");
         }
         else if(e.getSource() == this.vista.bRemiso){
             this.vista.cajaFecha.setVisible(false);
+            this.vista.textoFecha.setText("");
             this.vista.cajaLibreta.setVisible(false);
+            this.vista.textoLibreta.setText("");
         }
         else if(e.getSource() == this.vista.bRecluta){
             this.vista.cajaFecha.setVisible(false);
             this.vista.cajaLibreta.setVisible(true);
+            this.vista.textoLibreta.setText("Libreta Militar o Código de Reclutamiento");
+            this.vista.textoFecha.setText("");
         }
         else if(e.getSource() == this.vista.bReservista){
             this.vista.cajaFecha.setVisible(false);
             this.vista.cajaLibreta.setVisible(true);
+            this.vista.textoLibreta.setText("Libreta Militar o Código de Reclutamiento");
+            this.vista.textoFecha.setText("");
         }
         else if(e.getSource() == this.vista.bMenorEdad){
             this.vista.cajaFecha.setVisible(false);
+            this.vista.textoFecha.setText("");
             this.vista.cajaLibreta.setVisible(false);
+            this.vista.textoLibreta.setText("");
         }
         //Se hace visible la ventana de insertar una persona
         else if (e.getSource() == this.vb.btnInsertar1){
