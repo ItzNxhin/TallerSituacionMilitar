@@ -140,7 +140,7 @@ public class VentanaBuscar extends javax.swing.JFrame {
                                     .addComponent(cajaFecha1, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(bReservista1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                                 .addComponent(bRemiso1)
                                 .addGap(85, 85, 85)
                                 .addComponent(bMenorEdad1)))
@@ -148,15 +148,16 @@ public class VentanaBuscar extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(68, 68, 68)
                 .addComponent(btnLimpiar1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                .addComponent(bVolver)
-                .addGap(38, 38, 38)
-                .addComponent(btnSalir1)
-                .addGap(70, 70, 70))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(192, 192, 192)
-                .addComponent(btnConsultar2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(bVolver)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSalir1)
+                        .addGap(70, 70, 70))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnConsultar2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,6 +257,11 @@ public class VentanaBuscar extends javax.swing.JFrame {
     //Metodo para limpiar el campo de cédula
     public void limpiarCampo(){
         cajaCedula1.setText("");
+        cajaNombre1.setText("");
+        cajaEdad1.setText("");
+        cajaApellido1.setText("");
+        cajaLibreta1.setText("");
+        cajaFecha1.setText("");
     }
     public void cedulaVacia(){
         JOptionPane.showMessageDialog(null, "No hay cedula que consultar", "CAMPO CEDULA VACIO", JOptionPane.ERROR_MESSAGE);
