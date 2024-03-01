@@ -62,6 +62,7 @@ public class Fachada implements ActionListener{
         this.vBuscar.btnConsultar2.addActionListener(this);
         this.vBuscar.btnLimpiar1.addActionListener(this);
         this.vBuscar.btnSalir1.addActionListener(this);
+        this.vBuscar.bVolver.addActionListener(this);
 
         this.cedulas = new ArrayList<>();
         
@@ -126,6 +127,7 @@ public class Fachada implements ActionListener{
                 if(this.vista.bRemiso.isSelected()){
                     try {
                         cRemiso.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()));
+                        cedulas.add(this.vista.cajaCedula.getText());
                     } catch (NullPointerException e2 ) {
                         this.vista.campoVacio();
                     } catch (NumberFormatException e3) {
@@ -136,6 +138,7 @@ public class Fachada implements ActionListener{
                 else if(this.vista.bRecluta.isSelected()){
                     try {
                         cReclutamiento.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaLibreta.getText());
+                        cedulas.add(this.vista.cajaCedula.getText());
                     } catch (NullPointerException e2 ) {
                         this.vista.campoVacio();
                     } catch (NumberFormatException e3) {
@@ -145,6 +148,7 @@ public class Fachada implements ActionListener{
                 else if(this.vista.bReservista.isSelected()){
                     try {
                         cReservista.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaLibreta.getText());
+                        cedulas.add(this.vista.cajaCedula.getText());
                     } catch (NullPointerException e2 ) {
                         this.vista.campoVacio();
                     } catch (NumberFormatException e3) {
@@ -155,6 +159,7 @@ public class Fachada implements ActionListener{
                 else if(this.vista.bAplazado.isSelected()){
                     try {
                         cAplazado.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaFecha.getText());
+                        cedulas.add(this.vista.cajaCedula.getText());
                     } catch (NullPointerException e2 ) {
                         this.vista.campoVacio();
                     } catch (NumberFormatException e3) {
@@ -164,6 +169,7 @@ public class Fachada implements ActionListener{
                 else if(this.vista.bMenorEdad.isSelected()){
                     try {
                         cMenorEdad.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()));
+                        cedulas.add(this.vista.cajaCedula.getText());
                     } catch (NullPointerException e2 ) {
                         this.vista.campoVacio();
                     } catch (NumberFormatException e3) {
@@ -175,37 +181,25 @@ public class Fachada implements ActionListener{
                     this.vista.estadoVacio();
                 }
 
-            }
-            
-            
-
-            //Agregar cedula al sistema
-            if(this.vista.cajaCedula.getText()!=null) cedulas.add(this.vista.cajaCedula.getText());
+            }            
         }
         //Botón consultar 
         else if(e.getSource() == this.vBuscar.btnConsultar2){
 
-            Boolean encontrado = false;
-            if(this.vBuscar.cajaCedula1.getText().isEmpty()) {
-                this.vBuscar.cedulaVacia(); 
-                encontrado = true;
-            }
-
-            else if(this.vista.bRemiso.isSelected()){
+            if(this.vBuscar.bRemiso1.isSelected()){
                try {
-                Remiso x = cRemiso.buscar(this.vBuscar.cajaCedula1.getText());
-                if(x!=null){
-                    this.vBuscar.cajaNombre1.setText(x.getNombre());
-                    this.vBuscar.cajaApellido1.setText(x.getApellido());
-                    this.vBuscar.cajaEdad1.setText(String.valueOf(x.getEdad()));
-                }
-                encontrado = true;
-               } catch (NullPointerException e1) {
+                    Remiso x = cRemiso.buscar(this.vBuscar.cajaCedula1.getText());
+                    if(x!=null){
+                        this.vBuscar.cajaNombre1.setText(x.getNombre());
+                        this.vBuscar.cajaApellido1.setText(x.getApellido());
+                        this.vBuscar.cajaEdad1.setText(String.valueOf(x.getEdad()));
+                    }
+               } catch (Exception e1) {
                 this.vBuscar.listaVacia("remisos");
                }
             }
 
-            else if(this.vista.bRecluta.isSelected()){
+            else if(this.vBuscar.bRecluta1.isSelected()){
                 try {
                     Reclutamiento x = cReclutamiento.buscar(this.vBuscar.cajaCedula1.getText());
                     if(x!=null){
@@ -214,13 +208,12 @@ public class Fachada implements ActionListener{
                         this.vBuscar.cajaEdad1.setText(String.valueOf(x.getEdad()));
                         this.vBuscar.cajaLibreta1.setText(x.getCodReclutamiento());
                     }
-                    encontrado = true;
-                   } catch (NullPointerException e1) {
+                   } catch (Exception e1) {
                     this.vBuscar.listaVacia("reclutas");
                    }
             }
 
-            else if(this.vista.bReservista.isSelected()){  
+            else if(this.vBuscar.bReservista1.isSelected()){  
                 try {
                     Reservista x = cReservista.buscar(this.vBuscar.cajaCedula1.getText());
                     if(x!=null){
@@ -229,13 +222,12 @@ public class Fachada implements ActionListener{
                         this.vBuscar.cajaEdad1.setText(String.valueOf(x.getEdad()));
                         this.vBuscar.cajaLibreta1.setText(x.getLibreta());
                     }
-                    encontrado = true;
-                   } catch (NullPointerException e1) {
+                   } catch (Exception e1) {
                     this.vBuscar.listaVacia("reservistas");
                    }
             }
 
-            else if(this.vista.bAplazado.isSelected()){
+            else if(this.vBuscar.bAplazado1.isSelected()){
                 try {
                     Aplazado x = cAplazado.buscar(this.vBuscar.cajaCedula1.getText());
                     if(x!=null){
@@ -244,13 +236,12 @@ public class Fachada implements ActionListener{
                         this.vBuscar.cajaEdad1.setText(String.valueOf(x.getEdad()));
                         this.vBuscar.cajaFecha1.setText(x.getFechaAplazado());
                     }
-                    encontrado = true;
-                   } catch (NullPointerException e1) {
+                   } catch (Exception e1) {
                     this.vBuscar.listaVacia("aplazados");
                    }                
             }
 
-            else if(this.vista.bMenorEdad.isSelected()){      
+            else if(this.vBuscar.bMenorEdad1.isSelected()){   
                 try {
                     MenorEdad x = cMenorEdad.buscar(this.vBuscar.cajaCedula1.getText());
                     if(x!=null){
@@ -258,39 +249,26 @@ public class Fachada implements ActionListener{
                         this.vBuscar.cajaApellido1.setText(x.getApellido());
                         this.vBuscar.cajaEdad1.setText(String.valueOf(x.getEdad()));
                     }
-                    encontrado = true;
-                   } catch (NullPointerException e1) {
+                   } catch (Exception e1) {
                     this.vBuscar.listaVacia("reservistas");
                    }
-            }
-
-            else if(encontrado==false){
-                boolean aux=false;
-                for(String i : cedulas){
-                    if(this.vBuscar.cajaCedula1.getText().equals(i)) aux = true;
-                }
-                if(aux==false){
-                    this.vBuscar.tieneOtraSituacion();
-                }
-                else{
-                    this.vBuscar.personaNoExiste();
-                }
             }
             else{
                 this.vista.estadoVacio();
             }
         
+        
         }
 
-        
         //Permite limpiar los campos de la ventana de Insertar persona
         else if(e.getSource() == this.vista.btnLimpiar){
             this.vista.limpiarCampos();
         }
         //Permite cerrar la ventana de insertar persona mediante el botón salir
         else if (e.getSource() == this.vista.btnSalir){
-            this.vista.setVisible(false);
+            this.vBuscar.dispose();
             this.vista.dispose();
+            this.vb.dispose();
         }
         //Permite limpiar el campo de la ventana de Consultar
         else if (e.getSource() == this.vBuscar.btnLimpiar1){
@@ -298,13 +276,15 @@ public class Fachada implements ActionListener{
         }
         //Permite salir de la ventana de Consultar
         else if (e.getSource() == this.vBuscar.btnSalir1){
-            this.vBuscar.setVisible(false);
             this.vBuscar.dispose();
+            this.vista.dispose();
+            this.vb.dispose();
         }
 
         else if(e.getSource() == this.vista.bVolver){
             vista.setVisible(false);
             vb.setVisible(true);
+            
         }
         else if(e.getSource() == this.vBuscar.bVolver){
             vBuscar.setVisible(false);
