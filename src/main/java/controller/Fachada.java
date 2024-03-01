@@ -137,39 +137,42 @@ public class Fachada implements ActionListener{
                         this.vista.estadoVacio();
                     }
                     //Condicional para estados que no pueden entrar menores
-                    else if(Integer.parseInt(this.vista.cajaEdad.getText())<18 && (this.vista.bRemiso.isSelected() || this.vista.bReservista.isSelected()) 
+                    else if(this.vista.bRemiso.isSelected() || this.vista.bReservista.isSelected() 
                         || this.vista.bAplazado.isSelected() || this.vista.bRecluta.isSelected()){
-                            this.vista.menorsito();
+                            if(Integer.parseInt(this.vista.cajaEdad.getText())<18) this.vista.menorsito();
+                            //Condionales para dependiendo del estado sleccionado, sea agregado en su respectivo control
+                            else if(this.vista.bRemiso.isSelected()){
+                                cRemiso.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()));
+                                cedulas.add(this.vista.cajaCedula.getText());
+                                this.vista.limpiarCampos();
+                                this.vista.insertado();
+                            }
+                            else if(this.vista.bRecluta.isSelected()){
+                                cReclutamiento.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaLibreta.getText());
+                                cedulas.add(this.vista.cajaCedula.getText());
+                                this.vista.limpiarCampos();
+                                this.vista.insertado();
+                            }
+                            else if(this.vista.bReservista.isSelected()){
+                                cReservista.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaLibreta.getText());
+                                cedulas.add(this.vista.cajaCedula.getText());
+                                this.vista.limpiarCampos();
+                                this.vista.insertado();
+                            }
+                            else if(this.vista.bAplazado.isSelected()){
+                                cAplazado.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaFecha.getText());
+                                cedulas.add(this.vista.cajaCedula.getText());
+                                this.vista.limpiarCampos();
+                                this.vista.insertado();    
+                            }
+                            
                     }
                     //Condicional para edad invalida
                     else if(Integer.parseInt(this.vista.cajaEdad.getText())<0){
                         this.vista.edadImposible();
                     }
-                    //Condionales para dependiendo del estado sleccionado, sea agregado en su respectivo control
-                    else if(this.vista.bRemiso.isSelected()){
-                        cRemiso.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()));
-                        cedulas.add(this.vista.cajaCedula.getText());
-                        this.vista.limpiarCampos();
-                        this.vista.insertado();
-                    }
-                    else if(this.vista.bRecluta.isSelected()){
-                        cReclutamiento.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaLibreta.getText());
-                        cedulas.add(this.vista.cajaCedula.getText());
-                        this.vista.limpiarCampos();
-                        this.vista.insertado();
-                    }
-                    else if(this.vista.bReservista.isSelected()){
-                        cReservista.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaLibreta.getText());
-                        cedulas.add(this.vista.cajaCedula.getText());
-                        this.vista.limpiarCampos();
-                        this.vista.insertado();
-                    }
-                    else if(this.vista.bAplazado.isSelected()){
-                        cAplazado.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()), this.vista.cajaFecha.getText());
-                        cedulas.add(this.vista.cajaCedula.getText());
-                        this.vista.limpiarCampos();
-                        this.vista.insertado();    
-                    }
+                    
+                    
                     else if(this.vista.bMenorEdad.isSelected()){
                         //Condional para ver si la persona efectivamente es menor de edad
                         if(Integer.parseInt(this.vista.cajaEdad.getText())<18){
