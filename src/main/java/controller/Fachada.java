@@ -180,10 +180,8 @@ public class Fachada implements ActionListener{
                         }
                         else{
                             this.vista.noMenor();
-                        }
-                        
+                        }   
                     }
-                    
                 } catch (NullPointerException e2 ) {
                     this.vista.campoVacio();    //Campo vacio
                 } catch (NumberFormatException e3) {
