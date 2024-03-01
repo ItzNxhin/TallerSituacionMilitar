@@ -217,10 +217,6 @@ public class Ventana extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BntInsertar;
@@ -250,7 +246,6 @@ public class Ventana extends javax.swing.JFrame {
 
     public void campoVacio(){
         JOptionPane.showMessageDialog(null, "Hay campos vacios, por favor llenelos", "CAMPOS VACIOS", JOptionPane.ERROR_MESSAGE);
-        return;
     }
 
     public void campoInvalido(){
@@ -264,6 +259,14 @@ public class Ventana extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Una persona ya existe con la cedula ingresada", "PERSONA EN EXISTENCIA", JOptionPane.ERROR_MESSAGE);
     }
 
+    public void insertado(){
+        JOptionPane.showMessageDialog(null, "Persona insertada con exito", "INSERTADO", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public void menorsito(){
+        JOptionPane.showMessageDialog(null, "Esta persona no puede ser insertada a esta situacion porque no cumple la mayoria de edad", "MENOR DE EDAD", JOptionPane.INFORMATION_MESSAGE);
+    }
+
     public void limpiarCampos() {
         cajaCedula.setText("");
         cajaNombre.setText("");
@@ -272,5 +275,13 @@ public class Ventana extends javax.swing.JFrame {
         cajaLibreta.setText("");
         cajaFecha.setText("");
 
+    }
+
+    public void edadImposible() {
+        JOptionPane.showMessageDialog(null, "Esta persona no puede ser insertada porque su edad no tiene sentido", "EDAD INVALIDA", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public void noMenor() {
+        JOptionPane.showMessageDialog(null, "Esta persona no es menor de edad", "MENOR DE EDAD", JOptionPane.ERROR_MESSAGE);
     }
 }
