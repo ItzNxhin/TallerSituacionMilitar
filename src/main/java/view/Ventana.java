@@ -267,6 +267,7 @@ public class Ventana extends javax.swing.JFrame {
     public void limpiarCampos() {
         cajaCedula.setText("");
         cajaNombre.setText("");
+        cajaEdad.setText("");
         cajaApellido.setText("");
         cajaLibreta.setText("");
         cajaFecha.setText("");
