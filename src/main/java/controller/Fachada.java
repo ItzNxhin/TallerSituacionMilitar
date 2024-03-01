@@ -283,7 +283,7 @@ public class Fachada implements ActionListener{
                                 break;
                             }
                         } catch (Exception e1) {
-                            this.vBuscar.listaVacia("reservistas");
+                            this.vBuscar.listaVacia("menores de edad");
                             break;
                         }
                     }
