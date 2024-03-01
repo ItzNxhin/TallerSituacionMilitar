@@ -118,14 +118,11 @@ public class Fachada implements ActionListener{
         }
         //Boton guardar
         else if(e.getSource() == this.vista.BntInsertar){
-            boolean aux=false;
-            for(String i : cedulas){
-                if(i.equals(this.vista.cajaCedula.getText())) aux = true;
-            }
-            if(aux==false && !cedulas.isEmpty()){
+            
+            if(cedulas.contains(this.vista.cajaCedula.getText()) && !cedulas.isEmpty()){
                 this.vista.yaExiste();
             }
-            else if(aux == false || cedulas.isEmpty()){
+            else {
                 if(this.vista.bRemiso.isSelected()){
                     try {
                         cRemiso.agregar(this.vista.cajaCedula.getText(), this.vista.cajaNombre.getText(),this.vista.cajaApellido.getText(),Integer.parseInt(this.vista.cajaEdad.getText()));
