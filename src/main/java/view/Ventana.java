@@ -51,6 +51,7 @@ public class Ventana extends javax.swing.JFrame {
         cajaFecha = new javax.swing.JTextField();
         btnLimpiar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
+        bVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,6 +92,8 @@ public class Ventana extends javax.swing.JFrame {
 
         btnSalir.setText("Salir");
 
+        bVolver.setText("Volver");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -127,7 +130,9 @@ public class Ventana extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnLimpiar)
                                 .addGap(43, 43, 43)
-                                .addComponent(BntInsertar))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(BntInsertar)
+                                    .addComponent(bVolver)))
                             .addComponent(textoLibreta, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -193,7 +198,9 @@ public class Ventana extends javax.swing.JFrame {
                             .addComponent(cajaFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addComponent(BntInsertar)
-                        .addGap(53, 53, 53))))
+                        .addGap(18, 18, 18)
+                        .addComponent(bVolver)
+                        .addGap(12, 12, 12))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -222,6 +229,7 @@ public class Ventana extends javax.swing.JFrame {
     public javax.swing.JRadioButton bRecluta;
     public javax.swing.JRadioButton bRemiso;
     public javax.swing.JRadioButton bReservista;
+    public javax.swing.JButton bVolver;
     public javax.swing.JButton btnLimpiar;
     public javax.swing.JButton btnSalir;
     public javax.swing.JTextField cajaApellido;
@@ -251,6 +259,9 @@ public class Ventana extends javax.swing.JFrame {
 
     public void estadoVacio(){
         JOptionPane.showMessageDialog(null, "No hay estado militar seleccionado, elija el estado", "ESTADO SIN SLECCIONAR", JOptionPane.ERROR_MESSAGE);
+    }
+    public void yaExiste(){
+        JOptionPane.showMessageDialog(null, "Una persona ya existe con la cedula ingresada", "PERSONA EN EXISTENCIA", JOptionPane.ERROR_MESSAGE);
     }
 
     public void limpiarCampos() {

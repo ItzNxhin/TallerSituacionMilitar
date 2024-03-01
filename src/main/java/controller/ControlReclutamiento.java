@@ -27,4 +27,16 @@ public class ControlReclutamiento {
         if (cedula.isEmpty() || nombre.isEmpty() || apellido.isEmpty() || codReclutamiento.isEmpty()) throw new NullPointerException();
         else lista.add(new Reclutamiento(cedula, nombre, apellido, edad, codReclutamiento));
     }
+
+    public Reclutamiento buscar(String cedula){
+        
+        if(lista.isEmpty()) throw new NullPointerException();
+        else{
+            for(Reclutamiento i : lista){
+                if(i.getCedula().equals(cedula)) return i;
+            }
+        }
+        return null; 
+        
+    }
 }

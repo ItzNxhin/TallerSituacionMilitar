@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Sara
@@ -31,8 +33,8 @@ public class VentanaBuscar extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         bReservista1 = new javax.swing.JRadioButton();
         bRemiso1 = new javax.swing.JRadioButton();
-        bMenorEdad = new javax.swing.JRadioButton();
-        bRecluta = new javax.swing.JRadioButton();
+        bMenorEdad1 = new javax.swing.JRadioButton();
+        bRecluta1 = new javax.swing.JRadioButton();
         bAplazado1 = new javax.swing.JRadioButton();
         textoCedula1 = new javax.swing.JLabel();
         textoNombre1 = new javax.swing.JLabel();
@@ -49,6 +51,7 @@ public class VentanaBuscar extends javax.swing.JFrame {
         btnConsultar2 = new javax.swing.JButton();
         btnLimpiar1 = new javax.swing.JButton();
         btnSalir1 = new javax.swing.JButton();
+        bVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,16 +63,11 @@ public class VentanaBuscar extends javax.swing.JFrame {
         Buscar.add(bRemiso1);
         bRemiso1.setText("Remiso");
 
-        Buscar.add(bMenorEdad);
-        bMenorEdad.setText("Menor de edad");
-        bMenorEdad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bMenorEdadActionPerformed(evt);
-            }
-        });
+        Buscar.add(bMenorEdad1);
+        bMenorEdad1.setText("Menor de edad");
 
-        Buscar.add(bRecluta);
-        bRecluta.setText("Recluta");
+        Buscar.add(bRecluta1);
+        bRecluta1.setText("Recluta");
 
         Buscar.add(bAplazado1);
         bAplazado1.setText("Aplazado");
@@ -86,12 +84,6 @@ public class VentanaBuscar extends javax.swing.JFrame {
 
         textoFecha1.setText("Fecha de Aplazamiento");
 
-        cajaCedula1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cajaCedula1ActionPerformed(evt);
-            }
-        });
-
         cajaNombre1.setEditable(false);
 
         cajaApellido1.setEditable(false);
@@ -103,15 +95,17 @@ public class VentanaBuscar extends javax.swing.JFrame {
         cajaFecha1.setEditable(false);
 
         btnConsultar2.setText("Consultar");
-
-        btnLimpiar1.setText("Limpiar");
-        btnLimpiar1.addActionListener(new java.awt.event.ActionListener() {
+        btnConsultar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiar1ActionPerformed(evt);
+                btnConsultar2ActionPerformed(evt);
             }
         });
 
+        btnLimpiar1.setText("Limpiar");
+
         btnSalir1.setText("Salir");
+
+        bVolver.setText("Volver");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -122,7 +116,7 @@ public class VentanaBuscar extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(105, 105, 105)
-                        .addComponent(bRecluta)
+                        .addComponent(bRecluta1)
                         .addGap(73, 73, 73)
                         .addComponent(bAplazado1)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -149,14 +143,16 @@ public class VentanaBuscar extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(bRemiso1)
                                 .addGap(85, 85, 85)
-                                .addComponent(bMenorEdad)))
+                                .addComponent(bMenorEdad1)))
                         .addGap(29, 29, 29))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(68, 68, 68)
                 .addComponent(btnLimpiar1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addComponent(bVolver)
+                .addGap(38, 38, 38)
                 .addComponent(btnSalir1)
-                .addGap(96, 96, 96))
+                .addGap(70, 70, 70))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(192, 192, 192)
                 .addComponent(btnConsultar2)
@@ -169,10 +165,10 @@ public class VentanaBuscar extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bReservista1)
                     .addComponent(bRemiso1)
-                    .addComponent(bMenorEdad))
+                    .addComponent(bMenorEdad1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bRecluta)
+                    .addComponent(bRecluta1)
                     .addComponent(bAplazado1))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -200,11 +196,13 @@ public class VentanaBuscar extends javax.swing.JFrame {
                     .addComponent(cajaFecha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnConsultar2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLimpiar1)
-                    .addComponent(btnSalir1))
-                .addContainerGap(26, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(bVolver)
+                        .addComponent(btnSalir1)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -223,69 +221,29 @@ public class VentanaBuscar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bMenorEdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMenorEdadActionPerformed
+    private void btnConsultar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultar2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bMenorEdadActionPerformed
+    }//GEN-LAST:event_btnConsultar2ActionPerformed
 
-    private void cajaCedula1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaCedula1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cajaCedula1ActionPerformed
-
-    private void btnLimpiar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnLimpiar1ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaBuscar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaBuscar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaBuscar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaBuscar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VentanaBuscar().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup Buscar;
-    private javax.swing.JRadioButton bAplazado1;
-    private javax.swing.JRadioButton bMenorEdad;
-    private javax.swing.JRadioButton bRecluta;
-    private javax.swing.JRadioButton bRemiso1;
-    private javax.swing.JRadioButton bReservista1;
+    public javax.swing.JRadioButton bAplazado1;
+    public javax.swing.JRadioButton bMenorEdad1;
+    public javax.swing.JRadioButton bRecluta1;
+    public javax.swing.JRadioButton bRemiso1;
+    public javax.swing.JRadioButton bReservista1;
+    public javax.swing.JButton bVolver;
     public javax.swing.JButton btnConsultar2;
     public javax.swing.JButton btnLimpiar1;
     public javax.swing.JButton btnSalir1;
-    private javax.swing.JTextField cajaApellido1;
-    private javax.swing.JTextField cajaCedula1;
-    private javax.swing.JTextField cajaEdad1;
-    private javax.swing.JTextField cajaFecha1;
-    private javax.swing.JTextField cajaLibreta1;
-    private javax.swing.JTextField cajaNombre1;
+    public javax.swing.JTextField cajaApellido1;
+    public javax.swing.JTextField cajaCedula1;
+    public javax.swing.JTextField cajaEdad1;
+    public javax.swing.JTextField cajaFecha1;
+    public javax.swing.JTextField cajaLibreta1;
+    public javax.swing.JTextField cajaNombre1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel textoApellido1;
     private javax.swing.JLabel textoCedula1;
@@ -298,6 +256,24 @@ public class VentanaBuscar extends javax.swing.JFrame {
     //Metodo para limpiar el campo de cédula
     public void limpiarCampo(){
         cajaCedula1.setText("");
+    }
+    public void cedulaVacia(){
+        JOptionPane.showMessageDialog(null, "No hay cedula que consultar", "CAMPO CEDULA VACIO", JOptionPane.ERROR_MESSAGE);
+    }
+    public void radiosVacios(){
+        JOptionPane.showMessageDialog(null, "Para consultar una persona, escoja su situacion militar", "SITUACION MILITAR SIN SELECCIONAR", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public void listaVacia(String cadena){
+        JOptionPane.showMessageDialog(null, "No hay" +cadena+" para consultar", "NO HAY PERSONAS EN EL SISTEMAS", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public void personaNoExiste(){
+        JOptionPane.showMessageDialog(null, "Esta persona no esta en la base de datos", "NO EXISTE", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public void tieneOtraSituacion(){
+        JOptionPane.showMessageDialog(null, "Esta persona no tiene la situacion militar seleccionada", "SITUACION MILITAR NO COINCEDENTE", JOptionPane.ERROR_MESSAGE);
     }
 }
 

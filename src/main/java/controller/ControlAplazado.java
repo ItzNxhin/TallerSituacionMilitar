@@ -27,5 +27,16 @@ public class ControlAplazado {
         if (cedula.isEmpty() || nombre.isEmpty() || apellido.isEmpty() || fechaAplazado.isEmpty()) throw new NullPointerException();
         else lista.add(new Aplazado(cedula, nombre, apellido, edad, fechaAplazado));
     }
+    public Aplazado buscar(String cedula){
+        
+        if(lista.isEmpty()) throw new NullPointerException();
+        else{
+            for(Aplazado i : lista){
+                if(i.getCedula().equals(cedula)) return i;
+            }
+        }
+        return null; 
+        
+    }
     
 }

@@ -26,4 +26,15 @@ public class ControlMenorEdad {
         if (cedula.isEmpty() || nombre.isEmpty() || apellido.isEmpty()) throw new NullPointerException();
         else lista.add(new MenorEdad(cedula, nombre, apellido, edad));
     }
+    public MenorEdad buscar(String cedula){
+        
+        if(lista.isEmpty()) throw new NullPointerException();
+        else{
+            for(MenorEdad i : lista){
+                if(i.getCedula().equals(cedula)) return i;
+            }
+        }
+        return null; 
+        
+    }
 }

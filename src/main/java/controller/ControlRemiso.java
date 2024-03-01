@@ -27,4 +27,16 @@ public class ControlRemiso {
         if (cedula.isEmpty() || nombre.isEmpty() || apellido.isEmpty()) throw new NullPointerException();
         else lista.add(new Remiso(cedula, nombre, apellido, edad));
     }
+
+    public Remiso buscar(String cedula){
+        
+        if(lista.isEmpty()) throw new NullPointerException();
+        else{
+            for(Remiso i : lista){
+                if(i.getCedula().equals(cedula)) return i;
+            }
+        }
+        return null; 
+        
+    }
 }

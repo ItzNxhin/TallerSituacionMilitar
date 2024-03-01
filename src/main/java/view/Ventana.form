@@ -86,7 +86,10 @@
                               <Group type="102" attributes="0">
                                   <Component id="btnLimpiar" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                  <Component id="BntInsertar" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="BntInsertar" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bVolver" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <Component id="textoLibreta" alignment="0" max="-2" attributes="0"/>
                           </Group>
@@ -173,7 +176,9 @@
                           </Group>
                           <EmptySpace pref="20" max="32767" attributes="0"/>
                           <Component id="BntInsertar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="bVolver" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -322,6 +327,14 @@
         <Component class="javax.swing.JButton" name="btnSalir">
           <Properties>
             <Property name="text" type="java.lang.String" value="Salir"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="bVolver">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Volver"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

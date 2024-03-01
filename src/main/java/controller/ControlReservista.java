@@ -27,4 +27,16 @@ public class ControlReservista {
         if (cedula.isEmpty() || nombre.isEmpty() || apellido.isEmpty() || libreta.isEmpty()) throw new NullPointerException();
         else lista.add(new Reservista(cedula, nombre, apellido, edad, libreta));
     }
+
+    public Reservista buscar(String cedula){
+        
+        if(lista.isEmpty()) throw new NullPointerException();
+        else{
+            for(Reservista i : lista){
+                if(i.getCedula().equals(cedula)) return i;
+            }
+        }
+        return null; 
+        
+    }
 }
