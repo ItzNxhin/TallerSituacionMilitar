@@ -112,6 +112,42 @@ public class Fachada implements ActionListener{
             this.vista.cajaLibreta.setVisible(false);
             this.vista.textoLibreta.setText("");
         }
+        //Metodos para desabilitar campos en la ventana de busqueda
+        if(e.getSource() == this.vBuscar.bAplazado1){
+            this.vBuscar.limpiarCampos();
+            this.vBuscar.cajaFecha1.setVisible(true);
+            this.vBuscar.cajaLibreta1.setVisible(true);
+            this.vBuscar.textoLibreta1.setText("Libreta Militar o Código de Reclutamiento");
+            this.vBuscar.textoFecha1.setText("Fecha de aplazamiento");
+        }
+        else if(e.getSource() == this.vBuscar.bRemiso1){
+            this.vista.limpiarCampos();
+            this.vBuscar.cajaFecha1.setVisible(false);
+            this.vBuscar.textoFecha1.setText("");
+            this.vBuscar.cajaLibreta1.setVisible(false);
+            this.vBuscar.textoLibreta1.setText("");
+        }
+        else if(e.getSource() == this.vBuscar.bRecluta1){
+            this.vBuscar.limpiarCampos();
+            this.vBuscar.cajaFecha1.setVisible(false);
+            this.vBuscar.cajaLibreta1.setVisible(true);
+            this.vBuscar.textoLibreta1.setText("Libreta Militar o Código de Reclutamiento");
+            this.vBuscar.textoFecha1.setText("");
+        }
+        else if(e.getSource() == this.vBuscar.bReservista1){
+            this.vBuscar.limpiarCampos();
+            this.vBuscar.cajaFecha1.setVisible(false);
+            this.vBuscar.cajaLibreta1.setVisible(true);
+            this.vBuscar.textoLibreta1.setText("Libreta Militar o Código de Reclutamiento");
+            this.vBuscar.textoFecha1.setText("");
+        }
+        else if(e.getSource() == this.vBuscar.bMenorEdad1){
+            this.vBuscar.limpiarCampos();
+            this.vBuscar.cajaFecha1.setVisible(false);
+            this.vBuscar.textoFecha1.setText("");
+            this.vBuscar.cajaLibreta1.setVisible(false);
+            this.vBuscar.textoLibreta1.setText("");
+        }
         //Se hace visible la ventana de insertar una persona
         else if (e.getSource() == this.vb.btnInsertar1){
             vb.setVisible(false);
@@ -122,6 +158,7 @@ public class Fachada implements ActionListener{
             vb.setVisible(false);
             vBuscar.setVisible(true);
         }
+        
         //Boton guardar
         else if(e.getSource() == this.vista.BntInsertar){
             
@@ -315,7 +352,7 @@ public class Fachada implements ActionListener{
         }
         //Permite limpiar el campo de la ventana de Consultar
         else if (e.getSource() == this.vBuscar.btnLimpiar1){
-            this.vBuscar.limpiarCampo();
+            this.vBuscar.limpiarCampos();
         }
         //Permite salir de la ventana de Consultar
         else if (e.getSource() == this.vBuscar.btnSalir1){
