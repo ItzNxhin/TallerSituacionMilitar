@@ -344,23 +344,18 @@ public class Fachada implements ActionListener{
         else if(e.getSource() == this.vista.btnLimpiar){
             this.vista.limpiarCampos();
         }
-        //Permite cerrar la ventana de insertar persona mediante el botón salir
-        else if (e.getSource() == this.vista.btnSalir){
-            this.vBuscar.dispose();
-            this.vista.dispose();
-            this.vb.dispose();
-        }
+    
         //Permite limpiar el campo de la ventana de Consultar
         else if (e.getSource() == this.vBuscar.btnLimpiar1){
             this.vBuscar.limpiarCampos();
         }
-        //Permite salir de la ventana de Consultar
-        else if (e.getSource() == this.vBuscar.btnSalir1){
+        //Botones para salir
+        else if (e.getSource() == this.vBuscar.btnSalir1|| e.getSource() == this.vista.btnSalir|| e.getSource() == this.vb.btnSalirvb){
             this.vBuscar.dispose();
             this.vista.dispose();
             this.vb.dispose();
         }
-
+        
         //Botenes para volver
         else if(e.getSource() == this.vista.bVolver){
             vista.setVisible(false);
@@ -371,10 +366,6 @@ public class Fachada implements ActionListener{
             vBuscar.setVisible(false);
             vb.setVisible(true);
         } 
-        else if (e.getSource() == this.vb.btnSalirvb){
-            this.vb.dispose();
-            this.vista.dispose();
-            this.vBuscar.dispose();
-        }
+        
     }
 }

@@ -6,7 +6,7 @@ package view;
 
 import javax.swing.JOptionPane;
 
-/**
+/**Venanta encargada para buscar una persona
  *
  * @author nahin
  */

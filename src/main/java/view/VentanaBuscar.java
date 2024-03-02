@@ -6,7 +6,7 @@ package view;
 
 import javax.swing.JOptionPane;
 
-/**
+/** Ventana encargada para buscar persona
  *
  * @author Sara
  */

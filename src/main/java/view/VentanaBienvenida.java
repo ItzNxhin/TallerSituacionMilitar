@@ -4,7 +4,7 @@
  */
 package view;
 
-/**
+/**Ventana encargada para la bienvenida
  *
  * @author Sara
  */
