@@ -91,6 +91,11 @@ public class VentanaBuscar extends javax.swing.JFrame {
         bAplazado1.setForeground(new java.awt.Color(255, 255, 255));
         bAplazado1.setText("Aplazado");
         bAplazado1.setContentAreaFilled(false);
+        bAplazado1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAplazado1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(bAplazado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, -1, -1));
 
         textoCedula1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
@@ -181,6 +186,10 @@ public class VentanaBuscar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnConsultar2ActionPerformed
 
+    private void bAplazado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAplazado1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bAplazado1ActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -205,13 +214,13 @@ public class VentanaBuscar extends javax.swing.JFrame {
     private javax.swing.JLabel textoApellido1;
     private javax.swing.JLabel textoCedula1;
     private javax.swing.JLabel textoEdad1;
-    private javax.swing.JLabel textoFecha1;
-    private javax.swing.JLabel textoLibreta1;
+    public javax.swing.JLabel textoFecha1;
+    public javax.swing.JLabel textoLibreta1;
     private javax.swing.JLabel textoNombre1;
     // End of variables declaration//GEN-END:variables
 
     //Metodo para limpiar el campo de cédula
-    public void limpiarCampo(){
+    public void limpiarCampos(){
         cajaCedula1.setText("");
         cajaNombre1.setText("");
         cajaEdad1.setText("");
