@@ -333,9 +333,11 @@ public class Fachada implements ActionListener{
         else if(e.getSource() == this.vBuscar.bVolver){
             vBuscar.setVisible(false);
             vb.setVisible(true);
-        }
+        } 
         else if (e.getSource() == this.vb.btnSalirvb){
             this.vb.dispose();
+            this.vista.dispose();
+            this.vBuscar.dispose();
         }
     }
 }
