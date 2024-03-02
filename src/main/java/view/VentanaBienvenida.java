@@ -27,6 +27,7 @@ public class VentanaBienvenida extends javax.swing.JFrame {
 
         btnInsertar1 = new javax.swing.JButton();
         btnConsultar1 = new javax.swing.JButton();
+        btnSalirvb = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -34,18 +35,30 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnInsertar1.setBackground(new java.awt.Color(153, 255, 153));
+        btnInsertar1.setBackground(new java.awt.Color(189, 243, 166));
+        btnInsertar1.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
         btnInsertar1.setText("INSERTAR");
         btnInsertar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInsertar1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnInsertar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 120, 50));
+        getContentPane().add(btnInsertar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 100, 40));
 
-        btnConsultar1.setBackground(new java.awt.Color(153, 255, 153));
+        btnConsultar1.setBackground(new java.awt.Color(190, 251, 169));
+        btnConsultar1.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
         btnConsultar1.setText("CONSULTAR");
-        getContentPane().add(btnConsultar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 120, 50));
+        getContentPane().add(btnConsultar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 120, 40));
+
+        btnSalirvb.setBackground(new java.awt.Color(255, 243, 176));
+        btnSalirvb.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
+        btnSalirvb.setText("SALIR");
+        btnSalirvb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirvbActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSalirvb, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 100, 30));
 
         jLabel2.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(153, 255, 153));
@@ -58,7 +71,7 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         jLabel1.setText("MILITAR COLOMBIANO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(VentanaBienvenida.class.getResource("/view/Imagen1.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Imagen1.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 410));
 
         pack();
@@ -68,10 +81,15 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnInsertar1ActionPerformed
 
+    private void btnSalirvbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirvbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalirvbActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnConsultar1;
     public javax.swing.JButton btnInsertar1;
+    public javax.swing.JButton btnSalirvb;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
