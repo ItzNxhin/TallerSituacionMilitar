@@ -57,6 +57,7 @@ public class Fachada implements ActionListener{
         //Escucha los botones de la ventana de bienvenida
         this.vb.btnInsertar1.addActionListener(this);
         this.vb.btnConsultar1.addActionListener(this);
+        this.vb.btnSalirvb.addActionListener(this);
         //Escucha los botones de la ventana de consulta
         this.vBuscar.btnConsultar2.addActionListener(this);
         this.vBuscar.btnLimpiar1.addActionListener(this);
@@ -332,6 +333,9 @@ public class Fachada implements ActionListener{
         else if(e.getSource() == this.vBuscar.bVolver){
             vBuscar.setVisible(false);
             vb.setVisible(true);
+        }
+        else if (e.getSource() == this.vb.btnSalirvb){
+            this.vb.dispose();
         }
     }
 }
