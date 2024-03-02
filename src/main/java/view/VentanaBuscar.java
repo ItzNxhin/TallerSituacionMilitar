@@ -51,159 +51,117 @@ public class VentanaBuscar extends javax.swing.JFrame {
         btnLimpiar1 = new javax.swing.JButton();
         btnSalir1 = new javax.swing.JButton();
         bVolver = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Buscar.add(bReservista1);
+        bReservista1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bReservista1.setForeground(new java.awt.Color(255, 255, 255));
         bReservista1.setText("Reservista");
+        bReservista1.setContentAreaFilled(false);
+        jPanel1.add(bReservista1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
         Buscar.add(bRemiso1);
+        bRemiso1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bRemiso1.setForeground(new java.awt.Color(255, 255, 255));
         bRemiso1.setText("Remiso");
+        bRemiso1.setContentAreaFilled(false);
+        jPanel1.add(bRemiso1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, -1, -1));
 
         Buscar.add(bMenorEdad1);
+        bMenorEdad1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bMenorEdad1.setForeground(new java.awt.Color(255, 255, 255));
         bMenorEdad1.setText("Menor de edad");
+        bMenorEdad1.setContentAreaFilled(false);
+        jPanel1.add(bMenorEdad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, -1, -1));
 
         Buscar.add(bRecluta1);
+        bRecluta1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bRecluta1.setForeground(new java.awt.Color(255, 255, 255));
         bRecluta1.setText("Recluta");
+        bRecluta1.setContentAreaFilled(false);
+        jPanel1.add(bRecluta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, -1, -1));
 
         Buscar.add(bAplazado1);
+        bAplazado1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bAplazado1.setForeground(new java.awt.Color(255, 255, 255));
         bAplazado1.setText("Aplazado");
+        bAplazado1.setContentAreaFilled(false);
+        jPanel1.add(bAplazado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, -1, -1));
 
+        textoCedula1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        textoCedula1.setForeground(new java.awt.Color(255, 255, 255));
         textoCedula1.setText("Cédula");
+        jPanel1.add(textoCedula1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
+        textoNombre1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        textoNombre1.setForeground(new java.awt.Color(255, 255, 255));
         textoNombre1.setText("Nombre");
+        jPanel1.add(textoNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
+        textoApellido1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        textoApellido1.setForeground(new java.awt.Color(255, 255, 255));
         textoApellido1.setText("Apellido");
+        jPanel1.add(textoApellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
+        textoEdad1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        textoEdad1.setForeground(new java.awt.Color(255, 255, 255));
         textoEdad1.setText("Edad");
+        jPanel1.add(textoEdad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
+        textoLibreta1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        textoLibreta1.setForeground(new java.awt.Color(255, 255, 255));
         textoLibreta1.setText("Libreta Militar o Código de Reclutamiento");
+        jPanel1.add(textoLibreta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
 
+        textoFecha1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        textoFecha1.setForeground(new java.awt.Color(255, 255, 255));
         textoFecha1.setText("Fecha de Aplazamiento");
+        jPanel1.add(textoFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
+        jPanel1.add(cajaCedula1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 150, -1));
 
         cajaNombre1.setEditable(false);
+        jPanel1.add(cajaNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 150, -1));
 
         cajaApellido1.setEditable(false);
+        jPanel1.add(cajaApellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 150, -1));
 
         cajaEdad1.setEditable(false);
+        jPanel1.add(cajaEdad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 150, -1));
 
         cajaLibreta1.setEditable(false);
+        jPanel1.add(cajaLibreta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 150, -1));
 
         cajaFecha1.setEditable(false);
+        jPanel1.add(cajaFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 150, -1));
 
+        btnConsultar2.setBackground(new java.awt.Color(153, 255, 153));
         btnConsultar2.setText("Consultar");
         btnConsultar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsultar2ActionPerformed(evt);
             }
         });
+        jPanel1.add(btnConsultar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, -1, -1));
 
+        btnLimpiar1.setBackground(new java.awt.Color(153, 255, 153));
         btnLimpiar1.setText("Limpiar");
+        jPanel1.add(btnLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
 
+        btnSalir1.setBackground(new java.awt.Color(153, 255, 153));
         btnSalir1.setText("Salir");
+        jPanel1.add(btnSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
 
+        bVolver.setBackground(new java.awt.Color(153, 255, 153));
         bVolver.setText("Volver");
+        jPanel1.add(bVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addComponent(bRecluta1)
-                        .addGap(73, 73, 73)
-                        .addComponent(bAplazado1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(textoCedula1)
-                                    .addComponent(textoFecha1)
-                                    .addComponent(textoLibreta1)
-                                    .addComponent(textoEdad1)
-                                    .addComponent(textoApellido1)
-                                    .addComponent(textoNombre1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cajaCedula1)
-                                    .addComponent(cajaNombre1)
-                                    .addComponent(cajaApellido1)
-                                    .addComponent(cajaEdad1)
-                                    .addComponent(cajaLibreta1)
-                                    .addComponent(cajaFecha1, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(bReservista1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
-                                .addComponent(bRemiso1)
-                                .addGap(85, 85, 85)
-                                .addComponent(bMenorEdad1)))
-                        .addGap(29, 29, 29))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(btnLimpiar1)
-                .addGap(52, 52, 52)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(bVolver)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSalir1)
-                        .addGap(70, 70, 70))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnConsultar2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bReservista1)
-                    .addComponent(bRemiso1)
-                    .addComponent(bMenorEdad1))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bRecluta1)
-                    .addComponent(bAplazado1))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoCedula1)
-                    .addComponent(cajaCedula1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoNombre1)
-                    .addComponent(cajaNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoApellido1)
-                    .addComponent(cajaApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoEdad1)
-                    .addComponent(cajaEdad1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoLibreta1)
-                    .addComponent(cajaLibreta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoFecha1)
-                    .addComponent(cajaFecha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnConsultar2)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLimpiar1)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(bVolver)
-                        .addComponent(btnSalir1)))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/fondobuscar.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 460));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -213,9 +171,7 @@ public class VentanaBuscar extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -244,6 +200,7 @@ public class VentanaBuscar extends javax.swing.JFrame {
     public javax.swing.JTextField cajaFecha1;
     public javax.swing.JTextField cajaLibreta1;
     public javax.swing.JTextField cajaNombre1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel textoApellido1;
     private javax.swing.JLabel textoCedula1;
