@@ -151,19 +151,19 @@ public class VentanaBuscar extends javax.swing.JFrame {
                 btnConsultar2ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConsultar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, -1, -1));
+        jPanel1.add(btnConsultar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, -1, -1));
 
         btnLimpiar1.setBackground(new java.awt.Color(153, 255, 153));
         btnLimpiar1.setText("Limpiar");
-        jPanel1.add(btnLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
+        jPanel1.add(btnLimpiar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 80, -1));
 
         btnSalir1.setBackground(new java.awt.Color(153, 255, 153));
         btnSalir1.setText("Salir");
-        jPanel1.add(btnSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
+        jPanel1.add(btnSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, -1, -1));
 
         bVolver.setBackground(new java.awt.Color(153, 255, 153));
         bVolver.setText("Volver");
-        jPanel1.add(bVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, -1, -1));
+        jPanel1.add(bVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/fondobuscar.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 460));

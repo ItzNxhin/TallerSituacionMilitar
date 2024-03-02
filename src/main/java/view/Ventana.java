@@ -62,7 +62,7 @@ public class Ventana extends javax.swing.JFrame {
 
         BntInsertar.setBackground(new java.awt.Color(204, 255, 204));
         BntInsertar.setText("Insertar");
-        jPanel1.add(BntInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 371, -1, -1));
+        jPanel1.add(BntInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
 
         tipoPersona.add(bReservista);
         bReservista.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -127,15 +127,15 @@ public class Ventana extends javax.swing.JFrame {
 
         btnLimpiar.setBackground(new java.awt.Color(204, 255, 204));
         btnLimpiar.setText("Limpiar");
-        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 391, -1, -1));
+        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, -1, -1));
 
         btnSalir.setBackground(new java.awt.Color(204, 255, 204));
         btnSalir.setText("Salir");
-        jPanel1.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 391, -1, -1));
+        jPanel1.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, -1, -1));
 
         bVolver.setBackground(new java.awt.Color(204, 255, 204));
         bVolver.setText("Volver");
-        jPanel1.add(bVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 412, -1, -1));
+        jPanel1.add(bVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/fondoventana.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 450));
