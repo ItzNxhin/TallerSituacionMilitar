@@ -67,8 +67,6 @@ public class Fachada implements ActionListener{
         this.cedulas = new ArrayList<>();
         
         iniciar();
-    
-
     }
 
     private void iniciar() {
